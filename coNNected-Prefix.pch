@@ -1,0 +1,69 @@
+//
+// Prefix header for all source files of the 'connected' target in the 'connected' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "AppDelegate.h"
+    #import <Parse/Parse.h>
+    #import <Crashlytics/Crashlytics.h>
+#endif
+
+#define NSLog(...) CLS_LOG(__VA_ARGS__)
+
+#define kPhoneNumber @"kPhoneNumber"
+#define kUserName @"kUserName"
+ 
+
+#define kSpeedThreshold @"kSpeedThreshold"
+#define kRestTime @"kRestTime"
+
+#define kUploadInterval 15*60
+#define kRecordInterval 15
+#define kTriggeringSpan 30 //30
+
+#define kRecordedData @"kRecordedData"
+
+#define kTimestamp @"kTimestamp"
+#define kLat @"kLat"
+#define kLon @"kLon"
+
+#define isPhone568 ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568)
+#define isIPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+
+#define kCustomFontRegular @"Helvetica"
+#define kCustomFontBold @"Helvetica"
+
+
+
+
+#define kUserNameUpdatedNotification @"kUserNameUpdatedNotification"
+#define kUserFinishedRegistrationNotification @"kUserFinishedRegistrationNotification"
+
+#define kMapDeltaLarge   0.1 //50 // 0.5 for Syndey city wide
+#define kMapDeltaMedium  0.01
+
+#define kPushMessageActionChat @"chat"
+#define kPushMessageActionConnect @"connect"
+
+
+#define kGoogleMapApiKey @"AIzaSyCGUCwLfGoNrHNogjmT6vYGi4OB_spo6ow"
+
+#define kCustomTitleBarFont @"Helvetica"//@"Helvetica-Bold"
+
+#define kAppStoreURL @"https://itunes.apple.com/us/app/connected-app/id876556571?ls=1&mt=8"
+
+
+#define NSLog(...) CLS_LOG(__VA_ARGS__)
